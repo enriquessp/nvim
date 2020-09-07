@@ -38,6 +38,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'asvetliakov/vim-easymotion'
 
   else
+    Plug 'terryma/vim-multiple-cursors'
+    Plug 'fatih/vim-go'
+    Plug 'sebdah/vim-delve'
+    Plug 'rhysd/vim-go-impl'
+
+    Plug 'terryma/vim-multiple-cursors'
     " Text Navigation
     Plug 'justinmk/vim-sneak'
     Plug 'unblevable/quick-scope'
@@ -88,15 +94,24 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/goyo.vim'
     " Making stuff
     Plug 'neomake/neomake'
-    " Snippets TODO fix TAB hijack
-    " Plug 'SirVer/ultisnips'
+    " Snippets
+    Plug 'honza/vim-snippets'
+    Plug 'mattn/emmet-vim'
     " Better Comments
     " Plug 'jbgutierrez/vim-better-comments'
     " Echo doc
     " Plug 'Shougo/echodoc.vim'
     " Interactive code
-    Plug 'metakirby5/codi.vim'
-    Plug 'https://github.com/vimwiki/vimwiki.git'
+    Plug 'ChristianChiarulli/codi.vim'
+    " Vim Wiki
+    " Plug 'https://github.com/vimwiki/vimwiki.git'
+
+    " React Dev
+    Plug 'pangloss/vim-javascript'
+    Plug 'leafgarland/typescript-vim'
+    Plug 'peitalin/vim-jsx-typescript'
+    Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+    Plug 'jparise/vim-graphql'
   endif
 
 

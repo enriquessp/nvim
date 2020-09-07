@@ -9,9 +9,9 @@
 source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/general/functions.vim
+source $HOME/.config/nvim/web/react.vim
 source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/keys/which-key.vim
-source $HOME/.config/nvim/general/paths.vim
 
 " Source depending on if VSCode is our client
 if exists('g:vscode')
@@ -27,6 +27,7 @@ else
   source $HOME/.config/nvim/plug-config/fzf.vim
   source $HOME/.config/nvim/plug-config/nerd-commenter.vim
   source $HOME/.config/nvim/plug-config/rainbow.vim
+  source $HOME/.config/nvim/plug-config/codi.vim
   source $HOME/.config/nvim/plug-config/quickscope.vim
   source $HOME/.config/nvim/plug-config/vim-go.vim
   source $HOME/.config/nvim/plug-config/vim-wiki.vim
@@ -39,12 +40,18 @@ else
   source $HOME/.config/nvim/plug-config/closetags.vim
   source $HOME/.config/nvim/plug-config/floaterm.vim
   source $HOME/.config/nvim/plug-config/vista.vim
-  luafile $HOME/.config/nvim/lua/plug-colorizer.lua
+  source $HOME/.config/nvim/plug-config/vim-go.vim
+  "luafile $HOME/.config/nvim/lua/plug-colorizer.lua
   " source $HOME/.config/nvim/plug-config/easymotion.vim
 endif
 
 " Experimental
 
-" Codi
-let g:codi#rightalign=0
+if !empty(glob("./paths.vim"))
+  source $HOME/.config/nvim/paths.vim
+endif
+let g:polyglot_disabled = ['csv']
 
+" Python
+" https://realpython.com/python-debugging-pdb/ " breakpoint syntax is really cool
+" also look into profiling as well

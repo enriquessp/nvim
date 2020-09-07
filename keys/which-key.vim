@@ -30,6 +30,7 @@ let g:which_key_map['.'] = [ ':e $MYVIMRC'                , 'open init' ]
 let g:which_key_map[';'] = [ ':Commands'                  , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                     , 'balance windows' ]
 let g:which_key_map[','] = [ 'Startify'                   , 'start screen' ]
+let g:which_key_map['c'] = [ ':Codi!!'                    , 'virtual repl']
 let g:which_key_map['d'] = [ ':bd'                        , 'delete buffer']
 let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
 let g:which_key_map['f'] = [ ':Files'                     , 'search files' ]
@@ -73,31 +74,32 @@ let g:which_key_map.b = {
 " s is for search
 let g:which_key_map.s = {
       \ 'name' : '+search' ,
-      \ '/' : [':History/'     , 'history'],
-      \ ';' : [':Commands'     , 'commands'],
-      \ 'a' : [':Ag'           , 'text Ag'],
-      \ 'b' : [':BLines'       , 'current buffer'],
-      \ 'B' : [':Buffers'      , 'open buffers'],
-      \ 'c' : [':Commits'      , 'commits'],
-      \ 'C' : [':BCommits'     , 'buffer commits'],
-      \ 'f' : [':Files'        , 'files'],
-      \ 'g' : [':GFiles'       , 'git files'],
-      \ 'G' : [':GFiles?'      , 'modified git files'],
-      \ 'h' : [':History'      , 'file history'],
-      \ 'H' : [':History:'     , 'command history'],
-      \ 'l' : [':Lines'        , 'lines'] ,
-      \ 'm' : [':Marks'        , 'marks'] ,
-      \ 'M' : [':Maps'         , 'normal maps'] ,
-      \ 'p' : [':Helptags'     , 'help tags'] ,
-      \ 'P' : [':Tags'         , 'project tags'],
-      \ 's' : [':Snippets'     , 'snippets'],
-      \ 'S' : [':Colors'       , 'color schemes'],
-      \ 't' : [':Rg'           , 'text Rg'],
-      \ 'T' : [':BTags'        , 'buffer tags'],
-      \ 'w' : [':Windows'      , 'search windows'],
-      \ 'y' : [':Filetypes'    , 'file types'],
-      \ 'z' : [':FZF'          , 'FZF'],
+      \ '/' : [':History/'              , 'history'],
+      \ ';' : [':Commands'              , 'commands'],
+      \ 'a' : [':Ag'                    , 'text Ag'],
+      \ 'b' : [':BLines'                , 'current buffer'],
+      \ 'B' : [':Buffers'               , 'open buffers'],
+      \ 'c' : [':Commits'               , 'commits'],
+      \ 'C' : [':BCommits'              , 'buffer commits'],
+      \ 'f' : [':Files'                 , 'files'],
+      \ 'g' : [':GFiles'                , 'git files'],
+      \ 'G' : [':GFiles?'               , 'modified git files'],
+      \ 'h' : [':History'               , 'file history'],
+      \ 'H' : [':History:'              , 'command history'],
+      \ 'l' : [':Lines'                 , 'lines'] ,
+      \ 'm' : [':Marks'                 , 'marks'] ,
+      \ 'M' : [':Maps'                  , 'normal maps'] ,
+      \ 'p' : [':Helptags'              , 'help tags'] ,
+      \ 'P' : [':Tags'                  , 'project tags'],
+      \ 's' : [':CocList snippets'      , 'snippets'],
+      \ 'S' : [':Colors'                , 'color schemes'],
+      \ 't' : [':Rg'                    , 'text Rg'],
+      \ 'T' : [':BTags'                 , 'buffer tags'],
+      \ 'w' : [':Windows'               , 'search windows'],
+      \ 'y' : [':Filetypes'             , 'file types'],
+      \ 'z' : [':FZF'                   , 'FZF'],
       \ }
+      " \ 's' : [':Snippets'     , 'snippets'],
 
 " g is for git
 let g:which_key_map.g = {
@@ -156,6 +158,7 @@ let g:which_key_map.l = {
       \ 'r' : ['<Plug>(coc-rename)'                  , 'rename'],
       \ 'R' : ['<Plug>(coc-references)'              , 'references'],
       \ 's' : [':CocList -I symbols'                 , 'references'],
+      \ 'S' : [':CocList snippets'                   , 'snippets'],
       \ 't' : ['<Plug>(coc-type-definition)'         , 'type definition'],
       \ 'u' : [':CocListResume'                      , 'resume list'],
       \ 'U' : [':CocUpdate'                          , 'update CoC'],
