@@ -26,6 +26,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " auto set indent settings
   Plug 'tpope/vim-sleuth'
 
+  Plug 'terryma/vim-multiple-cursors'
+
+  Plug 'fatih/vim-go'                            " Go support
+  Plug 'sebdah/vim-delve'                        " Go support debug
+  Plug 'rhysd/vim-go-impl'                       " Go support to impl - Interfaces easy implemantation
+
+
   if exists('g:vscode')
     " Easy motion for VSCode
     Plug 'asvetliakov/vim-easymotion'
