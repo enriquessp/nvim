@@ -44,9 +44,19 @@ if !exists('g:vscode')
   " au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
   autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-
   " You can't stop me
   cmap w!! w !sudo tee %
 endif
 
+let g:python_host_prog = "/usr/local/bin/python2"
 
+" Clojure config
+" Place configuration AFTER `call plug#end()`!
+let g:ale_linters = {
+      \ 'clojure': ['clj-kondo', 'joker']
+      \}
+
+" Fugitive Conflict Resolution
+nnoremap <leader>gd :Gvdiff<CR>
+nnoremap gdh :diffget //2<CR>
+nnoremap gdl :diffget //3<CR>

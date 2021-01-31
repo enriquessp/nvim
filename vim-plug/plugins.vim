@@ -8,6 +8,14 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
+  " Clojure config - https://oli.me.uk/getting-started-with-clojure-neovim-and-conjure-in-minutes/
+  Plug 'guns/vim-sexp'
+  Plug 'tpope/vim-sexp-mappings-for-regular-people'
+  " Plug 'Shougo/deoplete.nvim'
+  " Plug 'ncm2/float-preview.nvim'
+  Plug 'w0rp/ale'
+  Plug 'Olical/conjure', { 'tag': 'v4.3.1' }
+
   " Change dates fast
   Plug 'tpope/vim-speeddating'
   " Convert binary, hex, etc..
@@ -20,7 +28,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tpope/vim-surround'
   " Better Comments
   Plug 'tpope/vim-commentary'
-  " Plug 'preservim/nerdcommenter'
+  " Plug 'preservim/nerdcommenter
   " Have the file system follow you around
   Plug 'airblade/vim-rooter'
   " auto set indent settings
@@ -31,16 +39,20 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'asvetliakov/vim-easymotion'
 
   else
-    Plug 'terryma/vim-multiple-cursors'
     Plug 'fatih/vim-go'
     Plug 'sebdah/vim-delve'
     Plug 'rhysd/vim-go-impl'
+
+    Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh'
+    \ }
 
     Plug 'terryma/vim-multiple-cursors'
     " Text Navigation
     Plug 'justinmk/vim-sneak'
     Plug 'unblevable/quick-scope'
-    " Plug 'easymotion/vim-easymotion'
+    Plug 'easymotion/vim-easymotion'
     " Add some color
     Plug 'norcalli/nvim-colorizer.lua'
     Plug 'junegunn/rainbow_parentheses.vim'
